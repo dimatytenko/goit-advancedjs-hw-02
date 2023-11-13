@@ -6,6 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import { convertMs, addLeadingZero } from './helpers/timer.js';
 
 const refs = {
+  input: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('[data-start]'),
   days: document.querySelector('[data-days]'),
   hours: document.querySelector('[data-hours]'),
@@ -55,6 +56,7 @@ function startTimer() {
   }, 1000);
 
   refs.startBtn.disabled = true;
+  refs.input.disabled = true;
 }
 
 function stopTimer() {
